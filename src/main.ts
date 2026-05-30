@@ -11,9 +11,9 @@ const interactive_texture_paths = [
   "/assets/nameplate.png",
 ];
 const interactive_sprite_positions = [
-  { x: 725, y: 200 },
-  { x: 550, y: 500 },
-  { x: 725, y: 350 },
+  { x: -25, y: -200 },
+  { x: -175, y: 100 },
+  { x: -25, y: -75 },
 ];
 const big_nameplate_texture_paths = ["/assets/nameplate_big.png"];
 
@@ -75,7 +75,7 @@ const video = await Assets.load("/assets/video.mp4");
   app.stage.addChild(hall_sprite);
   interactive_sprites.forEach((sprite) => {
     sprite.visible = false;
-    app.stage.addChild(sprite);
+    hall_sprite.addChild(sprite);
   });
 
   const walkHallFn = () => {
